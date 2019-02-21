@@ -22,7 +22,7 @@ def get_args():
     # parser.add_argument('--device_ids', default=64, type=int, help='image size')
     parser.add_argument('--temp', default=0.7, type=float, help='temperature of sampling')
     parser.add_argument('--n_sample', default=20, type=int, help='number of samples')
-    parser.add_argument('path', metavar='PATH', type=str, help='Path to image directory')
+    parser.add_argument('--path', metavar='PATH', type=str, help='Path to image directory')
 
     args = parser.parse_args()
 

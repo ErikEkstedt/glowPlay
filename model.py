@@ -55,13 +55,13 @@ class ActNorm(nn.Module):
             self.initialize(input)
             self.initialized = True
 
+        # logabs = lambda x: torch.log(torch.abs(x))
         log_abs = logabs(self.scale)
 
         logdet = height * width * torch.sum(log_abs)
 
         if self.logdet:
             return self.scale * (input + self.loc), logdet
-
         else:
             return self.scale * (input + self.loc)
 

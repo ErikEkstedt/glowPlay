@@ -32,9 +32,7 @@ def get_fig(img):
 
 writer = SummaryWriter()
 
-
 train_loader, test_loader = load_mnist()
-
 
 n_flow = 10
 n_block = 2
@@ -96,7 +94,6 @@ for i in range(100):
     writer.add_figure('Original', fig)
 
 # Invertible ?
-
 # with torch.no_grad():
 #     log_p, logdet, total_out = model(image.to('cuda'))
 #     img = model.reverse(total_out).cpu().data
@@ -112,8 +109,3 @@ for i in range(100):
 # plt.imshow(image[0][0].cpu(), aspect='auto')
 # plt.colorbar()
 # plt.show()
-
-
-# Sampling
-
-
